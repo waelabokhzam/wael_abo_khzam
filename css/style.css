@@ -108,16 +108,18 @@ nav ul li a:hover {
 footer{
   letter-spacing: 1px;
   font-size: 19px;
-  position: absolute;
+  position: relative;
   bottom: 0;
+  background-color: #222;
+  color: #007ced;
+  text-transform: capitalize;
   left: 50%;
   transform: translateX(-50%);
+  width: fit-content;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  color: #007ced;
-  text-transform: capitalize;
 }
 footer span{
   padding-right: 5px;
