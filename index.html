@@ -14,13 +14,15 @@
   <div class="hero-header">
     <div class="wrapper">
       <header>
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fa fa-bars"></label>
         <div class="logo">
           <a href="./index.html"><i class="fa-solid fa-w"></i></a>
           <div class="logo-text">wael</div>
         </div>
         <nav>
           <ul class="navlinks">
-            <li><a href="./index.html">home</a></li>
+            <li><a class="active" href="./index.html">home</a></li>
             <li><a href="./project.html">my project</a></li>
             <li><a href="./about.html">about me</a></li>
             <li><a href="./contact.html">contact me</a></li>
@@ -30,32 +32,45 @@
 
       <div class="container">
         <div class="hero-pic">
-          <img src="./IMG_20231220_170351.jpg" alt="">
+          <img id="image" src="image/wael.jpg" alt="">
         </div>
         <div class="hero-text">
           <h5>hi i'm <span>front-end developer</span></h5>
           <h2>wael abo khzam</h2>
           <p>i have Experience In Web Developer (front-end , back-end )
             i'm working front-end react JS developer.
-            I Graduated From Damascus University From The Faculty Of Information Engineering With A Grade Average Is 73 .
+            I Graduated From Damascus University From The Faculty Of Information Engineering With A Grade Average Is 73
+            .
 
           </p>
           <div class="cv">
-            <a href="./CV_Wael - f.pdf" download>download CV</a>
+            <a href="./CV_Wael - f.pdf" download>download My CV</a>
           </div>
           <div class="social">
-            <a href="https://www.facebook.com/wael.abokhzam"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=+9630951993413"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:waelabokhzam@gmail.com"><i class="fas fa-mail-bulk"></i></a>
+            <a href="https://github.com/waelabokhzam" target="_blank"><i class="fa-brands fa-github" style="color: #f4c10b;"></i></a>
+            <a href="https://www.linkedin.com/in/wael-h-abo-khzam-b528401b2/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #2c5eb5;"></i></a>
+            <a href="https://www.facebook.com/wael.abokhzam" target="_blank"><i class="fa-brands fa-facebook" style="color: skyblue;"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=+963951993413" target="_blank"><i class="fa-brands fa-whatsapp" style="color: greenyellow;"></i></a>
+            <a href="mailto:waelabokhzam@gmail.com" target="_blank"><i class="fa fa-mail-bulk" style="color: red;"></i></a>
           </div>
         </div>
       </div>
     </div>
-    
+
   </div>
 
-  
 
+  <script>
+    let arrayOfImage = ["/image/wael.jpg", "/image/wael1.jpg"];
+    const image = () => {
+      setInterval(() => {
+        let randomIndex = Math.floor(Math.random() * arrayOfImage.length);
+        let imgId = document.getElementById("image");
+        imgId.src = arrayOfImage[randomIndex]
+      }, 2000);
+    }
+    image();
+  </script>
 </body>
 
 </html>
