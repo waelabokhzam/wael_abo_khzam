@@ -65,6 +65,7 @@
     const image = () => {
       setInterval(() => {
         let randomIndex = Math.floor(Math.random() * arrayOfImage.length);
+        console.log(randomIndex);
         let imgId = document.getElementById("image");
         imgId.src = arrayOfImage[randomIndex]
       }, 2000);
